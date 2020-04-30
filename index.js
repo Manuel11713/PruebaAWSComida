@@ -24,4 +24,4 @@ app.listen(process.env.PORT | 5000,()=>{
     console.log('Server on port ',process.env.PORT | 5000);
 });
 
-
+console.log(process.env.PERSONAL);
