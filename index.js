@@ -13,7 +13,7 @@ app.get('*', function(req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-mongoose.connect('mongodb+srv://manuel:Spartan11713@cluster0-rhrav.mongodb.net/test?retryWrites=true&w=majority',
+mongoose.connect(`mongodb+srv://${process.env.USER_MONGO}:${process.env.PASS_MONGO}@cluster0-rhrav.mongodb.net/test?retryWrites=true&w=majority`,
 { useNewUrlParser: true, useUnifiedTopology: true },(err,res)=>{
   if(err){console.log(err);return}
   console.log('Db connected');
